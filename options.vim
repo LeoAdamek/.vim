@@ -145,25 +145,11 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if has("gui_running")
-    colorscheme solarized
-else
-    colorscheme ir_black
-endif
+colorscheme ir_black
 
 set background=dark
 
-" Set font according to system
-if has("mac") || has("macunix")
-    set gfn=Menlo:h14
-    set shell=/bin/bash
-elseif has("win16") || has("win32")
-    set gfn=DejaVu_Sans_Mono:h10:cANSI
-    cd  ~  " Default working directory (C:\Users\$USER)
-elseif has("linux")
-    set gfn=Monospace\ 10
-    set shell=/usr/bin/zsh
-endif
+set guifont=Terminus\ 8 " This might be quite small.
 
 " Open MacVim in fullscreen mode
 if has("gui_macvim")
