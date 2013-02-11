@@ -31,6 +31,7 @@ endif
 " Important Colorschemes
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'jsahlen/vim-ir_black'
 
 " Awesome extras
 Bundle 'mileszs/ack.vim'
