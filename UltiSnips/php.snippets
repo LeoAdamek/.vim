@@ -1,0 +1,12 @@
+snippet jdbo
+\$db = JFactory::getDbo();
+\$q  = $db->getQuery(true);
+\
+\$q->select("${1:*}");
+\$q->from("#__${2}");
+\
+\${3}
+\
+\$db->setQuery($q);
+\$result = $db->${4}();
+endsnippet
