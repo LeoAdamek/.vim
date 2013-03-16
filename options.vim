@@ -145,7 +145,15 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+<<<<<<< HEAD
 colorscheme ir_black
+=======
+if has("gui_running")
+    colorscheme solarized
+else
+    colorscheme Tomorrow-Night
+endif
+>>>>>>> c8a8805716c08dafedf4e4924e7c9956ea4fe662
 
 set background=dark
 
@@ -171,3 +179,20 @@ endtry
 
 "" vim Powerline.
 let g:Powerline_symbols = 'unicode'
+
+" Quick Date insert.
+iab <expr> dts strftime("%c")
+
+"""
+" => PHP tags, no variables!
+"""
+let g:tagbar_type_php  = {
+            \ 'ctagstype' : 'php',
+            \ 'kinds'     : [
+            \ 'i:interfaces',
+            \ 'c:classes',
+            \ 'd:constant definitions',
+            \ 'f:functions',
+            \ 'j:javascript functions:1'
+        \ ]
+    \ }
