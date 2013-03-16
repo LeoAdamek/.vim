@@ -145,15 +145,11 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-<<<<<<< HEAD
-colorscheme ir_black
-=======
 if has("gui_running")
     colorscheme solarized
 else
-    colorscheme Tomorrow-Night
+    colorscheme default
 endif
->>>>>>> c8a8805716c08dafedf4e4924e7c9956ea4fe662
 
 set background=dark
 
