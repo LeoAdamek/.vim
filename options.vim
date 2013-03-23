@@ -153,8 +153,6 @@ endif
 
 set background=dark
 
-set guifont=Terminus\ 8 " This might be quite small.
-
 " Open MacVim in fullscreen mode
 if has("gui_macvim")
     set fuoptions=maxvert,maxhorz
@@ -192,3 +190,13 @@ let g:tagbar_type_php  = {
             \ 'j:javascript functions:1'
         \ ]
     \ }
+
+
+" Haskell!
+au Bufenter *.hs compiler ghc
+au Bufenter *.hs set completeopt=menu,menuone
+if has("win32")
+        let g:haddock_browser = "C:/Program Files (x86)/Mozilla Firefox/firefox.exe"
+else
+        let g:haddock_browser = "lynx"
+endif
