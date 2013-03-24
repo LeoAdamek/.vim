@@ -153,8 +153,6 @@ endif
 
 set background=dark
 
-set guifont=Terminus\ 8 " This might be quite small.
-
 " Open MacVim in fullscreen mode
 if has("gui_macvim")
     set fuoptions=maxvert,maxhorz

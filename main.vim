@@ -14,6 +14,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'php.vim'
 Bundle 'python.vim'
 Bundle 'sukima/xmledit'
+Bundle 'lukerandall/haskellmode-vim'
 
 " GUI Enhancements
 Bundle 'scrooloose/nerdtree'
@@ -34,6 +35,8 @@ Bundle 'majutsushi/tagbar'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'wgibbs/vim-irblack'
+Bundle 'vim-scripts/wombat256.vim'
+Bundle  'jaromero/vim-monokai-refined'
 
 " Awesome extras
 Bundle 'mileszs/ack.vim'
@@ -48,4 +51,3 @@ Bundle 'SirVer/ultisnips'
 source ~/.vim/functions.vim
 source ~/.vim/options.vim
 source ~/.vim/mappings.vim
-
