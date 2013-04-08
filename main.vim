@@ -7,9 +7,10 @@ call vundle#rc()
 " Vundles...
 " Base Vundle
 Bundle 'gmarik/vundle'
-"=====================
+"=======================================
 
 " Syntaxes
+" -------------------------------------
 
 " Markdown (New!)
 Bundle 'tpope/vim-markdown'
@@ -30,6 +31,7 @@ Bundle 'lukerandall/haskellmode-vim'
 Bundle "kchmck/vim-coffee-script"
 
 " GUI Enhancements
+" ------------------------------------
 
 " Directory Tree
 Bundle 'scrooloose/nerdtree'
@@ -47,6 +49,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'c9s/bufexplorer'                
 
 " Better status line
+" Bundle 'Lokaltog/powerline'
 Bundle 'Lokaltog/vim-powerline'
 
 " Syntax Checker
@@ -55,11 +58,15 @@ Bundle 'scrooloose/syntastic'
 " Code outliner
 Bundle 'majutsushi/tagbar'
 
+" LaTeX ``sparkle''
+Bundle 'jcf/vim-latex'
+
 " Requires Python (and installation of Jedi)
 " Bundle 'davidhalter/jedi-vim'
 
 
 " Important Colorschemes
+" ------------------------------------------
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'wgibbs/vim-irblack'
@@ -67,6 +74,7 @@ Bundle 'vim-scripts/wombat256.vim'
 Bundle  'jaromero/vim-monokai-refined'
 
 " Awesome extras
+" -----------------------------------------
 Bundle 'mileszs/ack.vim'
 
 " Git integration
@@ -81,7 +89,7 @@ Bundle 'tpope/vim-surround'
 " Snippits
 Bundle 'SirVer/ultisnips'
 
-" Everything is stored in these files.]
+" Everything is stored in these files.
 " Make good use of them.
 source ~/.vim/functions.vim
 source ~/.vim/options.vim

@@ -2,7 +2,7 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
-set history=700
+set history=1000
 
 " Enable filetype plugins
 filetype plugin on
@@ -24,6 +24,7 @@ let g:mapleader = ","
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
+" (7 lines will always appear between the cursor and window edge)
 set so=7
 
 " Turn on the WiLd menu
@@ -79,15 +80,15 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Add a bit extra margin to the left
-set foldcolumn=1
-
+" No margin where the fold is.
+set foldcolumn=0
 
 set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guioptions=''	" Eliminate the GUI. (It's useless, but gVim > terminal Vim because X11 and full 24-bit colours.
+    " Eliminate the GUI. (It's useless, but gVim > terminal Vim because X11 and full 24-bit colours.
+    set guioptions=''	
     set t_Co=256
     set guitablabel=%M\ %t
 endif
@@ -135,44 +136,19 @@ set viminfo^=%
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
+
+
 " Always show the status line
 set laststatus=2
 
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => GUI related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-if has("gui_running")
-    colorscheme solarized
-else
-    colorscheme default
-endif
-
-set background=dark
-
-" Open MacVim in fullscreen mode
-if has("gui_macvim")
-    set fuoptions=maxvert,maxhorz
-    au GUIEnter * set fullscreen
-endif
-
-" Disable scrollbars (real hackers don't use scrollbars for navigation!)
-set guioptions-=r
-set guioptions-=R
-set guioptions-=l
-set guioptions-=L
 
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
 catch
 endtry
-
-"" vim Powerline.
-let g:Powerline_symbols = 'unicode'
 
 " Quick Date insert.
 iab <expr> dts strftime("%c")
